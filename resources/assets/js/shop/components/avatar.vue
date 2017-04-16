@@ -6,11 +6,11 @@
     </div>
 
     <div class="buttons">
-      <x-button type="default">选择图片
+      <wv-button type="default">选择图片
                 <input type="file" name="file" id="file" @change="fileChange">
-      </x-button>
-      <x-button type="primary" @click="save">保存</x-button>
-      <x-button type="warn" @click="cancle">取消</x-button>
+      </wv-button>
+      <wv-button type="primary" @click="save">保存</wv-button>
+      <wv-button type="warn" @click="cancle">取消</wv-button>
     </div>
 
     <loading :show="isLoading"></loading>

@@ -1,6 +1,5 @@
 {
-  "/shop-home.js": "/shop-home.js",
-  "/shop.js": "/shop.js",
   "/mix.js": "/mix.js",
+  "/shop.js": "/shop.js",
   "/vendor.js": "/vendor.js"
 }

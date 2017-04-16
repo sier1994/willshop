@@ -1,33 +1,38 @@
 {
   "private": true,
   "scripts": {
-    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch-poll": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --watch-poll --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "clean": "node_modules/.bin/rimraf public/build"
   },
   "devDependencies": {
+    "alloyfinger": "^0.1.6",
     "animate.css": "^3.5.2",
-    "axios": "^0.15.3",
-    "babel-eslint": "^7.1.1",
+    "axios": "^0.16.1",
+    "babel-eslint": "^7.2.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
-    "babel-preset-stage-2": "^6.22.0",
+    "babel-preset-stage-2": "^6.24.1",
     "bootstrap-sass": "^3.3.7",
     "element-ui": "1.2.3",
-    "eslint": "^3.17.1",
+    "eslint": "^3.19.0",
     "eslint-loader": "^1.6.3",
     "fastclick": "^1.0.6",
     "jquery": "^3.1.1",
     "laravel-mix": "0.*",
     "lodash": "^4.17.2",
-    "normalize.css": "^5.0.0",
+    "normalize.css": "^6.0.0",
     "shelljs": "^0.7.7",
-    "vue": "^2.2.4",
-    "vue-axios": "^1.2.2",
-    "vue-router": "^2.3.0",
+    "vue": "^2.2.5",
+    "vue-axios": "^2.0.1",
+    "vue-router": "^2.4.0",
+    "vue-template-compiler": "^2.2.5",
     "vuex": "^2.2.1",
-    "we-vue": "1.0.*"
+    "we-vue": "^1.1.0"
   }
 }
